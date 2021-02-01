@@ -13,6 +13,5 @@ namespace AngularLogin.Models
         [Key]
         public string userName { get; set; }
         public string password { get; set; }
-
     }
 }
