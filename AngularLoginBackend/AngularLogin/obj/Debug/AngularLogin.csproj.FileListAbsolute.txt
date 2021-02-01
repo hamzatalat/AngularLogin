@@ -168,3 +168,12 @@ F:\Mine\AngularLogin\AngularLoginBackend\AngularLogin\obj\Debug\AngularLogin.csp
 F:\Mine\AngularLogin\AngularLoginBackend\AngularLogin\obj\Debug\AngularLogin.csproj.CopyComplete
 F:\Mine\AngularLogin\AngularLoginBackend\AngularLogin\obj\Debug\AngularLogin.dll
 F:\Mine\AngularLogin\AngularLoginBackend\AngularLogin\obj\Debug\AngularLogin.pdb
+F:\Mine\AngularLogin\AngularLoginBackend\AngularLogin\bin\EntityFramework.dll
+F:\Mine\AngularLogin\AngularLoginBackend\AngularLogin\bin\EntityFramework.SqlServer.dll
+F:\Mine\AngularLogin\AngularLoginBackend\AngularLogin\bin\System.Web.Cors.dll
+F:\Mine\AngularLogin\AngularLoginBackend\AngularLogin\bin\System.Web.Http.Cors.dll
+F:\Mine\AngularLogin\AngularLoginBackend\AngularLogin\bin\EntityFramework.xml
+F:\Mine\AngularLogin\AngularLoginBackend\AngularLogin\bin\EntityFramework.SqlServer.xml
+F:\Mine\AngularLogin\AngularLoginBackend\AngularLogin\bin\System.Web.Http.Cors.xml
+F:\Mine\AngularLogin\AngularLoginBackend\AngularLogin\obj\Debug\AngularLogin.Migrations.Initial.resources
+F:\Mine\AngularLogin\AngularLoginBackend\AngularLogin\obj\Debug\AngularLogin.csproj.GenerateResource.cache
