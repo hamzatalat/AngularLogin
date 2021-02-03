@@ -36,6 +36,21 @@ namespace AngularLogin.Controllers
 
             return Ok(authentication);
         }
+
+        [ResponseType(typeof(IAsyncResult))]
+        [HttpPost]
+        [Route("{CheckEmail}")]
+        public IHttpActionResult CheckEmail(string username)
+        {
+            Authentication authentication = db.SignUps.Find(username);
+            if (authentication == null)
+            {
+                return NotFound();
+            }
+            return Ok();
+        }
+
+
         [ResponseType(typeof(IAsyncResult))]
         [HttpPost]
         [Route("{SignIn}")]
