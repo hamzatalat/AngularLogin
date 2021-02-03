@@ -37,16 +37,16 @@ namespace AngularLogin.Controllers
             return Ok(signUp);
         }
 
-        public IHttpActionResult GetSignUp(string id)
-        {
-            SignUp signUp = db.SignUps.Find(id);
-            if (signUp == null)
-            {
-                return NotFound();
-            }
+        //public IHttpActionResult GetSignUp(string id)
+        //{
+        //    SignUp signUp = db.SignUps.Find(id);
+        //    if (signUp == null)
+        //    {
+        //        return NotFound();
+        //    }
 
-            return Ok(signUp);
-        }
+        //    return Ok(signUp);
+        //}
 
 
         // PUT: api/SignUps/5
