@@ -3,12 +3,12 @@
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class Initial : DbMigration
+    public partial class IntialDb : DbMigration
     {
         public override void Up()
         {
             CreateTable(
-                "dbo.SignUps",
+                "dbo.Authentications",
                 c => new
                     {
                         userName = c.String(nullable: false, maxLength: 128),
@@ -22,7 +22,7 @@
         
         public override void Down()
         {
-            DropTable("dbo.SignUps");
+            DropTable("dbo.Authentications");
         }
     }
 }

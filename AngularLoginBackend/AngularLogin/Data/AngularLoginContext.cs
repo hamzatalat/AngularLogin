@@ -19,6 +19,6 @@ namespace AngularLogin.Data
         {
         }
 
-        public System.Data.Entity.DbSet<AngularLogin.Models.SignUp> SignUps { get; set; }
+        public System.Data.Entity.DbSet<AngularLogin.Models.Authentication> SignUps { get; set; }
     }
 }

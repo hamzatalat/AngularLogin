@@ -13,57 +13,44 @@ using AngularLogin.Models;
 
 namespace AngularLogin.Controllers
 {
-    [RoutePrefix("api")]
-    public class SignUpsController : ApiController
+    public class AuthenticationsController : ApiController
     {
         private AngularLoginContext db = new AngularLoginContext();
 
-        // GET: api/SignUps
-        public IQueryable<SignUp> GetSignUps()
+        // GET: api/Authentications
+        public IQueryable<Authentication> GetSignUps()
         {
             return db.SignUps;
         }
 
-        // GET: api/SignUps/5
-        [ResponseType(typeof(SignUp))]
-        public IHttpActionResult GetSignUp(string id)
+        // GET: api/Authentications/5
+        [ResponseType(typeof(Authentication))]
+        public IHttpActionResult GetAuthentication(string id)
         {
-            SignUp signUp = db.SignUps.Find(id);
-            if (signUp == null)
+            Authentication authentication = db.SignUps.Find(id);
+            if (authentication == null)
             {
                 return NotFound();
             }
 
-            return Ok(signUp);
+            return Ok(authentication);
         }
 
-        //public IHttpActionResult GetSignUp(string id)
-        //{
-        //    SignUp signUp = db.SignUps.Find(id);
-        //    if (signUp == null)
-        //    {
-        //        return NotFound();
-        //    }
-
-        //    return Ok(signUp);
-        //}
-
-
-        // PUT: api/SignUps/5
+        // PUT: api/Authentications/5
         [ResponseType(typeof(void))]
-        public IHttpActionResult PutSignUp(string id, SignUp signUp)
+        public IHttpActionResult PutAuthentication(string id, Authentication authentication)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
 
-            if (id != signUp.userName)
+            if (id != authentication.userName)
             {
                 return BadRequest();
             }
 
-            db.Entry(signUp).State = EntityState.Modified;
+            db.Entry(authentication).State = EntityState.Modified;
 
             try
             {
@@ -71,7 +58,7 @@ namespace AngularLogin.Controllers
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!SignUpExists(id))
+                if (!AuthenticationExists(id))
                 {
                     return NotFound();
                 }
@@ -84,16 +71,16 @@ namespace AngularLogin.Controllers
             return StatusCode(HttpStatusCode.NoContent);
         }
 
-        // POST: api/SignUps
-        [ResponseType(typeof(SignUp))]
-        public IHttpActionResult PostSignUp(SignUp signUp)
+        // POST: api/Authentications
+        [ResponseType(typeof(Authentication))]
+        public IHttpActionResult PostAuthentication(Authentication authentication)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
 
-            db.SignUps.Add(signUp);
+            db.SignUps.Add(authentication);
 
             try
             {
@@ -101,7 +88,7 @@ namespace AngularLogin.Controllers
             }
             catch (DbUpdateException)
             {
-                if (SignUpExists(signUp.userName))
+                if (AuthenticationExists(authentication.userName))
                 {
                     return Conflict();
                 }
@@ -111,23 +98,23 @@ namespace AngularLogin.Controllers
                 }
             }
 
-            return CreatedAtRoute("DefaultApi", new { id = signUp.userName }, signUp);
+            return CreatedAtRoute("DefaultApi", new { id = authentication.userName }, authentication);
         }
 
-        // DELETE: api/SignUps/5
-        [ResponseType(typeof(SignUp))]
-        public IHttpActionResult DeleteSignUp(string id)
+        // DELETE: api/Authentications/5
+        [ResponseType(typeof(Authentication))]
+        public IHttpActionResult DeleteAuthentication(string id)
         {
-            SignUp signUp = db.SignUps.Find(id);
-            if (signUp == null)
+            Authentication authentication = db.SignUps.Find(id);
+            if (authentication == null)
             {
                 return NotFound();
             }
 
-            db.SignUps.Remove(signUp);
+            db.SignUps.Remove(authentication);
             db.SaveChanges();
 
-            return Ok(signUp);
+            return Ok(authentication);
         }
 
         protected override void Dispose(bool disposing)
@@ -139,7 +126,7 @@ namespace AngularLogin.Controllers
             base.Dispose(disposing);
         }
 
-        private bool SignUpExists(string id)
+        private bool AuthenticationExists(string id)
         {
             return db.SignUps.Count(e => e.userName == id) > 0;
         }

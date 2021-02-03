@@ -175,8 +175,6 @@ F:\Mine\AngularLogin\AngularLoginBackend\AngularLogin\bin\System.Web.Http.Cors.d
 F:\Mine\AngularLogin\AngularLoginBackend\AngularLogin\bin\EntityFramework.xml
 F:\Mine\AngularLogin\AngularLoginBackend\AngularLogin\bin\EntityFramework.SqlServer.xml
 F:\Mine\AngularLogin\AngularLoginBackend\AngularLogin\bin\System.Web.Http.Cors.xml
-F:\Mine\AngularLogin\AngularLoginBackend\AngularLogin\obj\Debug\AngularLogin.Migrations.Initial.resources
-F:\Mine\AngularLogin\AngularLoginBackend\AngularLogin\obj\Debug\AngularLogin.csproj.GenerateResource.cache
 F:\Mine\AngularLogin\AngularLoginBackend\AngularLogin\bin\Microsoft.Data.Edm.dll
 F:\Mine\AngularLogin\AngularLoginBackend\AngularLogin\bin\Microsoft.Data.OData.dll
 F:\Mine\AngularLogin\AngularLoginBackend\AngularLogin\bin\System.Spatial.dll
@@ -212,3 +210,5 @@ F:\Mine\AngularLogin\AngularLoginBackend\AngularLogin\bin\ko\System.Spatial.reso
 F:\Mine\AngularLogin\AngularLoginBackend\AngularLogin\bin\ru\System.Spatial.resources.dll
 F:\Mine\AngularLogin\AngularLoginBackend\AngularLogin\bin\zh-Hans\System.Spatial.resources.dll
 F:\Mine\AngularLogin\AngularLoginBackend\AngularLogin\bin\zh-Hant\System.Spatial.resources.dll
+F:\Mine\AngularLogin\AngularLoginBackend\AngularLogin\obj\Debug\AngularLogin.Migrations.IntialDb.resources
+F:\Mine\AngularLogin\AngularLoginBackend\AngularLogin\obj\Debug\AngularLogin.csproj.GenerateResource.cache

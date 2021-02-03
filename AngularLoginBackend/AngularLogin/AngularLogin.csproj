@@ -180,19 +180,18 @@
     <Compile Include="Areas\HelpPage\SampleGeneration\SampleDirection.cs" />
     <Compile Include="Areas\HelpPage\SampleGeneration\TextSample.cs" />
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
+    <Compile Include="Controllers\AuthenticationsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\SignUpsController.cs" />
     <Compile Include="Data\AngularLoginContext.cs" />
-    <Compile Include="Data\ApplicationDbContext.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202102010953481_Initial.cs" />
-    <Compile Include="Migrations\202102010953481_Initial.designer.cs">
-      <DependentUpon>202102010953481_Initial.cs</DependentUpon>
+    <Compile Include="Migrations\202102030800568_IntialDb.cs" />
+    <Compile Include="Migrations\202102030800568_IntialDb.designer.cs">
+      <DependentUpon>202102030800568_IntialDb.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
-    <Compile Include="Models\SignUp.cs" />
+    <Compile Include="Models\Authentication.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -279,8 +278,8 @@
     <Content Include="Scripts\jquery-3.4.1.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202102010953481_Initial.resx">
-      <DependentUpon>202102010953481_Initial.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202102030800568_IntialDb.resx">
+      <DependentUpon>202102030800568_IntialDb.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

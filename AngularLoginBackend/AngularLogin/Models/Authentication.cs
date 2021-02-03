@@ -6,7 +6,7 @@ using System.Web;
 
 namespace AngularLogin.Models
 {
-    public class SignUp
+    public class Authentication
     {
         public string firstName { get; set; }
         public string lastName { get; set; }
