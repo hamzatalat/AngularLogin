@@ -13,17 +13,18 @@ using AngularLogin.Models;
 
 namespace AngularLogin.Controllers
 {
+    [RoutePrefix("Authentications")]
     public class AuthenticationsController : ApiController
     {
         private AngularLoginContext db = new AngularLoginContext();
 
-        // GET: api/Authentications
+        // GET: /Authentications
         public IQueryable<Authentication> GetSignUps()
         {
             return db.SignUps;
         }
 
-        // GET: api/Authentications/5
+        // GET: /Authentications/5
         [ResponseType(typeof(Authentication))]
         public IHttpActionResult GetAuthentication(string id)
         {
@@ -35,8 +36,24 @@ namespace AngularLogin.Controllers
 
             return Ok(authentication);
         }
+        [ResponseType(typeof(IAsyncResult))]
+        [HttpPost]
+        [Route("{SignIn}")]
+        public IHttpActionResult SignIn(Authentication User)
+        {
+            Authentication user = db.SignUps.Find(User.userName);
+            if (user == null)
+            {
+                return NotFound();
+            }
+            else if (user.password == user.password)
+            {
+                return Ok(user);
+            }
+            return BadRequest();
+        }
 
-        // PUT: api/Authentications/5
+        // PUT: /Authentications/5
         [ResponseType(typeof(void))]
         public IHttpActionResult PutAuthentication(string id, Authentication authentication)
         {
@@ -71,7 +88,7 @@ namespace AngularLogin.Controllers
             return StatusCode(HttpStatusCode.NoContent);
         }
 
-        // POST: api/Authentications
+        // POST: /Authentications
         [ResponseType(typeof(Authentication))]
         public IHttpActionResult PostAuthentication(Authentication authentication)
         {
@@ -101,7 +118,7 @@ namespace AngularLogin.Controllers
             return CreatedAtRoute("DefaultApi", new { id = authentication.userName }, authentication);
         }
 
-        // DELETE: api/Authentications/5
+        // DELETE: /Authentications/5
         [ResponseType(typeof(Authentication))]
         public IHttpActionResult DeleteAuthentication(string id)
         {
