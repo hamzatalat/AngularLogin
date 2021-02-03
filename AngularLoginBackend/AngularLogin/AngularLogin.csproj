@@ -182,7 +182,6 @@
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\SignUpsController.cs" />
-    <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="Data\AngularLoginContext.cs" />
     <Compile Include="Data\ApplicationDbContext.cs" />
     <Compile Include="Global.asax.cs">
