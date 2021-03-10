@@ -18,6 +18,11 @@ namespace AngularLogin
 
             config.MapHttpAttributeRoutes();
             config.Routes.MapHttpRoute(
+                name: "DefaultApi1",
+                routeTemplate: "{controller}/{action}/{id}",
+                defaults: new { id = RouteParameter.Optional });
+
+            config.Routes.MapHttpRoute(
                 name: "DefaultApi",
                 routeTemplate: "{controller}/{id}",
                 defaults: new { id = RouteParameter.Optional }

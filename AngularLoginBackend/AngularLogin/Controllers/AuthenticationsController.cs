@@ -37,6 +37,24 @@ namespace AngularLogin.Controllers
             return Ok(authentication);
         }
 
+        [Route("{ChangePassword}")]
+        [HttpPost]
+        public IHttpActionResult ChangePassword (Authentication User)
+        {
+            Authentication authenticationUser = db.SignUps.Find(User.userName);
+            if (authenticationUser == null)
+            {
+                return NotFound();
+            }
+            else
+            {
+                authenticationUser.password = User.password;
+                db.Entry(authenticationUser).State = EntityState.Modified;
+                db.SaveChanges();
+            }
+            return Ok();
+        }
+
         [ResponseType(typeof(IAsyncResult))]
         [HttpPost]
         [Route("{CheckEmail}")]

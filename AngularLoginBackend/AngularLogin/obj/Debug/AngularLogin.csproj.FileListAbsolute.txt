@@ -163,7 +163,6 @@ F:\Mine\AngularLogin\AngularLoginBackend\AngularLogin\bin\System.Web.WebPages.De
 F:\Mine\AngularLogin\AngularLoginBackend\AngularLogin\bin\System.Web.WebPages.Razor.xml
 F:\Mine\AngularLogin\AngularLoginBackend\AngularLogin\bin\Antlr3.Runtime.pdb
 F:\Mine\AngularLogin\AngularLoginBackend\AngularLogin\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-F:\Mine\AngularLogin\AngularLoginBackend\AngularLogin\obj\Debug\AngularLogin.csprojAssemblyReference.cache
 F:\Mine\AngularLogin\AngularLoginBackend\AngularLogin\obj\Debug\AngularLogin.csproj.CoreCompileInputs.cache
 F:\Mine\AngularLogin\AngularLoginBackend\AngularLogin\obj\Debug\AngularLogin.csproj.CopyComplete
 F:\Mine\AngularLogin\AngularLoginBackend\AngularLogin\obj\Debug\AngularLogin.dll
